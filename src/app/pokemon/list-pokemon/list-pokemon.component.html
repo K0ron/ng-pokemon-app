@@ -15,9 +15,7 @@
             <p>
               <small>{{ pokemon.created | date : "dd/MM/yy" }}</small>
             </p>
-            <span
-              *ngFor="let type of pokemon.types"
-              class="{{ type | pokemonTypeColor }}"
+            <span *ngFor="let type of pokemon.types" class="{{ type }}"
               >{{ type }}
             </span>
           </div>
