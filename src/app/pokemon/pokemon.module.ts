@@ -24,7 +24,6 @@ const pokemonRoutes: Routes = [
 @NgModule({
   declarations: [ListPokemonComponent, DetailPokemonComponent, BorderCardDirective, PokemonTypeColorPipe, PokemonFormComponent, EditPokemonComponent, AddPokemonComponent, SearchPokemonComponent, LoaderComponent],
   imports: [CommonModule, FormsModule, RouterModule.forChild(pokemonRoutes)],
-
   providers: [PokemonService],
 })
 export class PokemonModule {}
