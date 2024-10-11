@@ -9,12 +9,18 @@ import { PokemonModule } from "./pokemon/pokemon.module";
 import { FormsModule } from "@angular/forms";
 import { InMemoryDataService } from "./in-memory-data.service";
 
-@NgModule({ declarations: [AppComponent, PageNotFoundComponent],
-    bootstrap: [AppComponent], imports: [BrowserModule,
-        FormsModule,
-        HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
-            dataEncapsulation: false,
-        }),
-        PokemonModule,
-        AppRoutingModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+@NgModule({
+  declarations: [AppComponent, PageNotFoundComponent],
+  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+      dataEncapsulation: false,
+    }),
+    PokemonModule,
+    AppRoutingModule,
+  ],
+  providers: [provideHttpClient(withInterceptorsFromDi())],
+})
 export class AppModule {}
